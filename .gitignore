@@ -1,4 +1,5 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
+# Only tracking .idea cause lazy
 
 # dependencies
 /node_modules
@@ -8,6 +9,7 @@
 
 # production
 /build
+/src/css
 
 # misc
 .DS_Store
