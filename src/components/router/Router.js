@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 const getCurrentPath = () => {
   const path = document.location.pathname;
@@ -16,8 +17,8 @@ export class Router extends Component {
   };
 
   static childContextTypes = {
-    route: React.PropTypes.string,
-    linkHandler: React.PropTypes.func
+    route: PropTypes.string,
+    linkHandler: PropTypes.func
   };
 
   getChildContext() {

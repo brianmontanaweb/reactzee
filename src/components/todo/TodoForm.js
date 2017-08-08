@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const TodoForm = (props) => (
   <form onSubmit={props.handleSubmit}>
@@ -9,7 +10,7 @@ export const TodoForm = (props) => (
 );
 
 TodoForm.propTypes = {
-  currentTodo: React.PropTypes.string,
-  handleInputChange: React.PropTypes.func,
-  handleSubmit: React.PropTypes.func,
+  currentTodo: PropTypes.string,
+  handleInputChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
 };
