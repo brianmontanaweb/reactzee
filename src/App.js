@@ -11,7 +11,8 @@ class App extends Component {
 
   state = {
     todos: [],
-    currentTodo: ''
+    currentTodo: '',
+    username: ''
   };
 
   static contextTypes = {
@@ -47,18 +48,21 @@ class App extends Component {
   };
 
   handleSubmit = (event) => {
+    console.log(event);
     event.preventDefault();
     const newId = generateId();
     const newTodo = {
+      id: newId,
       name: this.state.currentTodo,
       isComplete: false,
-      id: newId,
+      username: this.state.username,
     };
     const updatedTodos = addTodo(this.state.todos, newTodo);
     this.setState({
       todos: updatedTodos,
       currentTodo: '',
-      errorMessage: ''
+      errorMessage: '',
+      username: ''
     });
     createTodo(newTodo)
       .then(() => this.showTempMessage('Todo added'));
@@ -78,7 +82,7 @@ class App extends Component {
 
   handleInputChange = (event) => {
     this.setState({
-      currentTodo: event.target.value
+      [event.target.name]: event.target.value
     });
   };
 
@@ -97,6 +101,7 @@ class App extends Component {
           {this.state.message && <span className='success'>{this.state.message}</span>}
           <TodoForm handleInputChange={this.handleInputChange}
                     currentTodo={this.state.currentTodo}
+                    username={this.state.username}
                     handleSubmit={submitHandler}
           />
           <TodoList
