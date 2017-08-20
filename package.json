@@ -12,7 +12,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "sass": "node-sass --watch src/scss --output=src/css"
+    "sass": "node-sass --watch src/scss --output=src/css",
+    "json": "json-server db.json --port 8080"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",

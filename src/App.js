@@ -74,6 +74,7 @@ class App extends Component {
   };
 
   handleEmptySubmit = (event) => {
+    console.log(event);
     event.preventDefault();
     this.setState({
       errorMessage: 'Please enter a name.'
@@ -87,7 +88,7 @@ class App extends Component {
   };
 
   render() {
-    const submitHandler = this.state.currentTodo ? this.handleSubmit : this.handleEmptySubmit;
+    const submitHandler = this.state.currentTodo && this.state.username ? this.handleSubmit : this.handleEmptySubmit;
     const displayTodos = filterTodos(this.state.todos, this.context.route);
 
     return (
