@@ -8,8 +8,15 @@ export const Input = (props) => {
            onChange={props.handleInputChange}
            value={props.inputValue}
            required={props.inputRequired}
+           className={props.inputClass}
     />
   );
+};
+
+Input.defaultProps = {
+  inputType: 'text',
+  inputRequired: false,
+  inputClass: 'form__input'
 };
 
 Input.propTypes = {

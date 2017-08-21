@@ -5,20 +5,23 @@ import {Button} from '../button/Button';
 
 export const TodoForm = (props) => (
   <form onSubmit={props.handleSubmit}>
-    <Input inputType="text"
-           inputName="currentTodo"
+    <Input inputName="currentTodo"
            handleInputChange={props.handleInputChange}
            inputValue={props.currentTodo}
            inputRequired={true}
     />
-    <Input inputType="text"
-           inputName="username"
+    <br />
+    <br />
+    <Input inputName="username"
            handleInputChange={props.handleInputChange}
            inputValue={props.username}
            inputRequired={true}
     />
+    <br />
+    <br />
     <Button buttonContent="Submit info"
             buttonType="submit"
+            buttonClass="btn-secondary btn-secondary--default"
     />
   </form>
 );
