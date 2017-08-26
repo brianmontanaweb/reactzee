@@ -19,14 +19,15 @@ export const Input = (props) => {
 Input.defaultProps = {
   inputType: 'text',
   inputRequired: false,
-  inputClass: 'form__input'
+  inputClass: 'form__input',
+  inputMin: 0,
 };
 
 Input.propTypes = {
   inputValue: PropTypes.string.isRequired,
   inputType: PropTypes.string.isRequired,
   inputName: PropTypes.string,
-  handleInputChange: PropTypes.func,
+  handleInputChange: PropTypes.func.isRequired,
   inputRequired: PropTypes.bool,
   inputClass: PropTypes.string,
   inputStep: PropTypes.number,

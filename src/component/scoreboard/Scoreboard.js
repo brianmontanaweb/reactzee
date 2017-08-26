@@ -1,32 +1,36 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Dice } from '../dice/Dice';
-import { Label } from '../label/Label';
-import { Input } from '../input/Input';
-import { Hint } from '../hint/Hint';
+import Goal from '../goal/Goal';
 
 class Scoreboard extends Component {
   render() {
     return (
       <div>
-        {/*Convert to component to handle consistent values across Dice/Label/Input*/}
-        <Dice diceValue={1}/>
-        <Label labelName="aces"
-               labelValue="How many aces?"/>
-        <Input inputValue={this.props.scoreValue}
-               inputType="number"
-               inputName="aces"
-               inputStep={1}
-               inputMin={0}
-               inputMax={6}
-               handleInputChange={this.props.handleInput}/>
-        <Hint hintContent="Aces are 1, add up all your aces to score this goal"/>
+        <Goal handleInput={this.props.handleInput}
+              goalValue={this.props.goalValue.aces}
+              goalDice="1"
+              goalMax={5}
+              goalName="aces"
+        />
+        <Goal handleInput={this.props.handleInput}
+              goalValue={this.props.goalValue.twos}
+              goalDice="2"
+              goalMax={10}
+              goalName="twos"
+        />
+        <Goal handleInput={this.props.handleInput}
+              goalValue={this.props.goalValue.threes}
+              goalDice="3"
+              goalMax={15}
+              goalName="threes"
+        />
       </div>
     )
   }
 
   static propTypes = {
-    scoreBoardCount: PropTypes.number
+    handleInput: PropTypes.func.isRequired,
+    goalValue: PropTypes.object.isRequired,
   };
 }
 

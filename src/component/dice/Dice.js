@@ -14,5 +14,5 @@ export const Dice = (props) => {
 };
 
 Dice.propTypes = {
-  diceValue: PropTypes.number.isRequired,
+  diceValue: PropTypes.string.isRequired,
 };

@@ -6,11 +6,13 @@ class App extends Component {
 
   state = {
     yahtzeeHistory: [],
-    aces: ''
+    aces: '',
+    twos: '',
+    threes: '',
+    fours: '',
   };
 
   handleInput = (event) => {
-    console.log(event.target.value);
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -21,7 +23,7 @@ class App extends Component {
       <div>
         <h1>Yahtzee!</h1>
         <Scoreboard handleInput={this.handleInput}
-                    scoreValue={this.state.aces} />
+                    goalValue={this.state} />
       </div>
     );
   }
