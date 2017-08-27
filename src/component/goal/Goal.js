@@ -11,14 +11,14 @@ class Goal extends React.Component {
       <div>
         <Dice diceValue={this.props.goalDice}/>
         <Label labelName="aces"
-               labelValue="How many aces?"/>
+               labelValue={`How many ${this.props.goalName}?`}/>
         <Input inputValue={this.props.goalValue}
                inputType="number"
                inputName={this.props.goalName}
                inputStep={1}
                inputMax={this.props.goalMax}
                handleInputChange={this.props.handleInput}/>
-        <Hint hintContent="Aces are 1, add up all your aces to score this goal"/>
+        <Hint hintContent={this.props.goalHint} />
       </div>
     )
   }
@@ -29,6 +29,7 @@ class Goal extends React.Component {
     goalDice: PropTypes.string.isRequired,
     goalMax: PropTypes.number,
     goalName: PropTypes.string.isRequired,
+    goalHint: PropTypes.string,
   }
 }
 

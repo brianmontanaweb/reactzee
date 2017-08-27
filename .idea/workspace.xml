@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="194f5124-6e6b-492d-a2a3-a8b5cb1c8aa7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/component/goal/Goal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/dice/Dice.js" afterPath="$PROJECT_DIR$/src/component/dice/Dice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/input/Input.js" afterPath="$PROJECT_DIR$/src/component/input/Input.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/goal/Goal.js" afterPath="$PROJECT_DIR$/src/component/goal/Goal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/scoreboard/Scoreboard.js" afterPath="$PROJECT_DIR$/src/component/scoreboard/Scoreboard.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -38,11 +34,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Scoreboard.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Scoreboard.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/component/scoreboard/Scoreboard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="22" />
+                <state relative-caret-position="918">
+                  <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -50,13 +46,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Goal.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Goal.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/component/goal/Goal.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="334">
-                  <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+                <state relative-caret-position="181">
+                  <caret line="13" column="64" lean-forward="true" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
+                    <marker date="1503857428599" expanded="true" signature="486:700" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -105,8 +102,8 @@
           <file leaf-file-name="Input.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/component/input/Input.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+                <state relative-caret-position="238">
+                  <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -199,8 +196,8 @@
         <option value="$PROJECT_DIR$/src/component/dice/Dice.js" />
         <option value="$PROJECT_DIR$/src/component/input/Input.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/component/scoreboard/Scoreboard.js" />
         <option value="$PROJECT_DIR$/src/component/goal/Goal.js" />
+        <option value="$PROJECT_DIR$/src/component/scoreboard/Scoreboard.js" />
       </list>
     </option>
   </component>
@@ -462,12 +459,12 @@
       <workItem from="1503329259735" duration="2136000" />
       <workItem from="1503331618560" duration="980000" />
       <workItem from="1503687861840" duration="1285000" />
-      <workItem from="1503759638644" duration="9851000" />
+      <workItem from="1503759638644" duration="11873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60521000" />
+    <option name="totallyTimeSpent" value="62543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -668,30 +665,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/input/Input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="238">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/scoreboard/Scoreboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/goal/Goal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="181">
+          <caret line="13" column="64" lean-forward="true" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <marker date="1503857428599" expanded="true" signature="486:700" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/scoreboard/Scoreboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
