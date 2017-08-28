@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Goal from '../goal/Goal';
+import Total from '../total/Total';
 
 class Scoreboard extends Component {
   render() {
+    let total = this.props.goalValue.ones + this.props.goalValue.twos + this.props.goalValue.threes + this.props.goalValue.fours + this.props.goalValue.fives + this.props.goalValue.sixes;
+
     return (
       <div>
+        {/*Convert this section into top section for passing state from here to children */}
         <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.goalValue.aces}
+              goalValue={this.props.goalValue.ones}
               goalDice="1"
               goalMax={5}
-              goalName="aces"
+              goalName="ones"
               goalHint="Count and add only ones"
         />
         <Goal handleInput={this.props.handleInput}
@@ -28,26 +32,28 @@ class Scoreboard extends Component {
               goalHint="Count and add only threes"
         />
         <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.goalValue.threes}
+              goalValue={this.props.goalValue.fours}
               goalDice="4"
               goalMax={20}
               goalName="fours"
               goalHint="Count and add only fours"
         />
         <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.goalValue.threes}
+              goalValue={this.props.goalValue.fives}
               goalDice="5"
               goalMax={25}
               goalName="fives"
               goalHint="Count and add only fives"
         />
         <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.goalValue.threes}
+              goalValue={this.props.goalValue.sixes}
               goalDice="6"
               goalMax={30}
               goalName="sixes"
               goalHint="Count and add only sixes"
         />
+        {/*Top total + bonus if score > 63*/}
+        <Total totalValue={total} />
       </div>
     )
   }

@@ -24,7 +24,6 @@ class Goal extends React.Component {
   }
 
   static propTypes = {
-    goalValue: PropTypes.string.isRequired,
     handleInput: PropTypes.func.isRequired,
     goalDice: PropTypes.string.isRequired,
     goalMax: PropTypes.number,

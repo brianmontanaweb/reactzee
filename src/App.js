@@ -6,15 +6,17 @@ class App extends Component {
 
   state = {
     yahtzeeHistory: [],
-    aces: '',
-    twos: '',
-    threes: '',
-    fours: '',
+    ones: 0,
+    twos: 0,
+    threes: 0,
+    fours: 0,
+    fives: 0,
+    sixes: 0,
   };
 
   handleInput = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: Number.parseInt(event.target.value, 10)
     });
   };
 
