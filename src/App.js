@@ -6,17 +6,22 @@ class App extends Component {
 
   state = {
     yahtzeeHistory: [],
-    ones: 0,
-    twos: 0,
-    threes: 0,
-    fours: 0,
-    fives: 0,
-    sixes: 0,
+    currentGoals: {
+      ones: 0,
+      twos: 0,
+      threes: 0,
+      fours: 0,
+      fives: 0,
+      sixes: 0,
+    },
   };
 
   handleInput = (event) => {
+    const currentGoals = this.state.currentGoals;
+    currentGoals[event.target.name] = event.target.value;
+
     this.setState({
-      [event.target.name]: Number.parseInt(event.target.value, 10)
+      currentGoals,
     });
   };
 
@@ -25,7 +30,7 @@ class App extends Component {
       <div>
         <h1>Yahtzee!</h1>
         <Scoreboard handleInput={this.handleInput}
-                    goalValue={this.state} />
+                    currentGoals={this.state.currentGoals} />
       </div>
     );
   }
