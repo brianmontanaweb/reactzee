@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 class UpperSection extends React.Component {
   render() {
     let total = Object.values(this.props.currentGoals).reduce((a,b) => Number.parseInt(a, 10) + (Number.parseInt(b, 10) || 0), 0);
-
     let bonusTotal = total > 63 ? total + 35 : total;
 
     return (
@@ -16,6 +15,7 @@ class UpperSection extends React.Component {
               goalDice="1"
               goalMax={5}
               goalName="ones"
+              goalStep={1}
               goalHint="Count and add only ones"
         />
         <Goal handleInput={this.props.handleInput}
@@ -23,6 +23,7 @@ class UpperSection extends React.Component {
               goalDice="2"
               goalMax={10}
               goalName="twos"
+              goalStep={2}
               goalHint="Count and add only twos"
         />
         <Goal handleInput={this.props.handleInput}
@@ -30,6 +31,7 @@ class UpperSection extends React.Component {
               goalDice="3"
               goalMax={15}
               goalName="threes"
+              goalStep={3}
               goalHint="Count and add only threes"
         />
         <Goal handleInput={this.props.handleInput}
@@ -37,6 +39,7 @@ class UpperSection extends React.Component {
               goalDice="4"
               goalMax={20}
               goalName="fours"
+              goalStep={4}
               goalHint="Count and add only fours"
         />
         <Goal handleInput={this.props.handleInput}
@@ -44,6 +47,7 @@ class UpperSection extends React.Component {
               goalDice="5"
               goalMax={25}
               goalName="fives"
+              goalStep={5}
               goalHint="Count and add only fives"
         />
         <Goal handleInput={this.props.handleInput}
@@ -51,6 +55,7 @@ class UpperSection extends React.Component {
               goalDice="6"
               goalMax={30}
               goalName="sixes"
+              goalStep={6}
               goalHint="Count and add only sixes"
         />
         {/*Top total + bonus if score > 63*/}

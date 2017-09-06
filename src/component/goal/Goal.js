@@ -15,7 +15,7 @@ class Goal extends React.Component {
         <Input inputValue={this.props.goalValue}
                inputType="number"
                inputName={this.props.goalName}
-               inputStep={1}
+               inputStep={this.props.goalStep}
                inputMax={this.props.goalMax}
                handleInputChange={this.props.handleInput}/>
         <Hint hintContent={this.props.goalHint} />
@@ -23,13 +23,17 @@ class Goal extends React.Component {
     )
   }
 
+  static defaultProps = {
+    goalStep: 1,
+  };
+
   static propTypes = {
     handleInput: PropTypes.func.isRequired,
     goalDice: PropTypes.string.isRequired,
     goalMax: PropTypes.number,
     goalName: PropTypes.string.isRequired,
     goalHint: PropTypes.string,
-  }
+  };
 }
 
 export default Goal;
