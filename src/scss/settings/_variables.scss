@@ -1,5 +1,16 @@
 @import url('//fonts.googleapis.com/css?family=Alice');
 @import url('//fonts.googleapis.com/css?family=Gloria+Hallelujah');
 
+//Fontstacks
 $primary-fonts: 'Gloria Hallelujah', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
 $secondary-fonts: 'Alice', 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+
+//Font sizes for typography
+$fs-xxx-large: 3.998rem;
+$fs-xx-large: 2.827rem;
+$fs-x-large: 1.999rem;
+$fs-large: 1.414rem;
+$fs-normal: 1rem;
+$fs-small: 0.707rem;
+$fs-x-small: 0.5rem;
+$fs-xx-small: 0.354rem;
