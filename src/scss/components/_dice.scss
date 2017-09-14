@@ -1,0 +1,88 @@
+.dice__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.dice__container {
+  flex: 0 1 30%;
+}
+
+.dice__component {
+  width: 100%;
+  padding-top: 100%;
+  border: 1px solid rgba(black, 0.5);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.dice-count {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.dice-count--1 {
+
+  &:after {
+    background-image: radial-gradient(circle at center, black $dice-size, transparent $dice-size);
+  }
+}
+
+.dice-count--2 {
+
+  &:after {
+    background-image: radial-gradient(circle at 75% 75%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 25%, black $dice-size, transparent $dice-size);
+  }
+}
+
+.dice-count--3 {
+
+  &:after {
+    background-image: radial-gradient(circle at 75% 75%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 50% 50%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 25%, black $dice-size, transparent $dice-size);
+  }
+}
+
+.dice-count--4 {
+
+  &:after {
+    background-image: radial-gradient(circle at 75% 75%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 75% 25%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 75%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 25%, black $dice-size, transparent $dice-size);
+  }
+}
+
+.dice-count--5 {
+
+  &:after {
+    background-image: radial-gradient(circle at 75% 75%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 75% 25%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 50% 50%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 75%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 25%, black $dice-size, transparent $dice-size);
+  }
+}
+
+.dice-count--6 {
+
+  &:after {
+    background-image: radial-gradient(circle at 75% 75%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 75% 50%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 75% 25%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 75%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 50%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 25%, black $dice-size, transparent $dice-size);
+  }
+}
