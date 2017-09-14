@@ -1,3 +1,60 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: $primary-fonts;
 }
+
+h1 {
+  font-size: $fs-xxx-large;
+}
+
+h2 {
+  font-size: $fs-xx-large;
+}
+
+h3 {
+  font-size: $fs-x-large;
+}
+
+h4 {
+  font-size: $fs-large;
+}
+
+h5 {
+  font-size: $fs-normal;
+}
+
+h6 {
+  font-size: $fs-small;
+}
+
+.fs-xxx-large {
+  font-size: $fs-xxx-large;
+}
+
+.fs-xx-large {
+  font-size: $fs-xx-large;
+}
+
+.fs-x-large {
+  font-size: $fs-x-large;
+}
+
+.fs-large {
+  font-size: $fs-large;
+}
+
+.fs-normal {
+  font-size: $fs-normal;
+}
+
+.fs-small {
+  font-size: $fs-small;
+}
+
+.fs-x-small {
+  font-size: $fs-x-small;
+}
+
+.fs-xx-small {
+  font-size: $fs-xx-small;
+}
+
