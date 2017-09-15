@@ -9,7 +9,6 @@ class Goal extends React.Component {
   render() {
     return (
       <div>
-        <Dice diceValue={this.props.goalDice}/>
         <Label labelName="aces"
                labelValue={`How many ${this.props.goalName}?`}/>
         <Input inputValue={this.props.goalValue}
@@ -19,6 +18,7 @@ class Goal extends React.Component {
                inputMax={this.props.goalMax}
                handleInputChange={this.props.handleInput}/>
         <Hint hintContent={this.props.goalHint} />
+        <Dice diceValue={this.props.goalDice}/>
       </div>
     )
   }

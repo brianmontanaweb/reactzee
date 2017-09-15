@@ -7,13 +7,14 @@
 
 .dice__container {
   flex: 0 1 30%;
+  max-width: 10vw;
 }
 
 .dice__component {
   width: 100%;
   padding-top: 100%;
   border: 1px solid rgba(black, 0.5);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
@@ -40,6 +41,8 @@
 .dice-count--2 {
 
   &:after {
+    background-image: radial-gradient(circle at 75% 75%, black $dice-size, transparent $dice-size),
+    radial-gradient(circle at 25% 25%, black $dice-size, transparent $dice-size);
     background-image: radial-gradient(circle at 75% 75%, black $dice-size, transparent $dice-size),
     radial-gradient(circle at 25% 25%, black $dice-size, transparent $dice-size);
   }
