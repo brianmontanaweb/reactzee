@@ -9,7 +9,7 @@ class UpperSection extends React.Component {
     let bonusTotal = total > 63 ? total + 35 : total;
 
     return (
-      <div>
+      <div className="flex__grid flex__grid--center flex__grid--row">
         <Goal handleInput={this.props.handleInput}
               goalValue={this.props.currentGoals.ones}
               goalDice="1"

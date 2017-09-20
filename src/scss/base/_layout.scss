@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Layout Styles
+   ========================================================================== */
+//Focusing on flexbox layout, cause Evergreen browsers
+.flex__grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex__cell {
+  flex-shrink: 0;
+}
+
+.flex__cell.-auto {
+  flex: 1 0;
+}
+
+.flex__grid.-top,
+.flex__grid--top {
+  align-items: flex-start;
+}
+
+.flex__grid.-middle,
+.flex__grid--middle {
+  align-items: center;
+}
+
+.flex__grid.-bottom,
+.flex__grid--bottom {
+  align-items: flex-end;
+}
+
+.flex__grid.-stretch,
+.flex__grid--stretch {
+  align-items: stretch;
+}
+
+.flex__grid.-baseline,
+.flex__grid--baseline {
+  align-items: baseline;
+}
+
+//Justify collection, horizontal
+.flex__grid.-left,
+.flex__grid--left {
+  justify-content: flex-start;
+}
+
+.flex__grid.-center,
+.flex__grid--center {
+  justify-content: center;
+}
+
+.flex__grid.-right,
+.flex__grid--right {
+  justify-content: flex-end;
+}
+
+.flex__grid.-between,
+.flex__grid--between {
+  justify-content: space-between;
+}
+
+.flex__grid.-around,
+.flex__grid--around {
+  justify-content: space-around;
+}
+
+//flex-direction thangs
+.flex__grid.-column,
+.flex__grid--column {
+  flex-direction: column;
+}
+
+.flex__grid--row {
+  flex-direction: row;
+}
+
+//Flex loop instead
+//.\-class = .-class
+//Media queries for targeting specific layouts on different screen sizes
+//Feel free to add more and address these changes across the site when updating and contain the media query with min/max values
+
+
+//This will be consistent unless overwritten by other styles later in the cascade
+@for $index from 1 through $grid-max {
+  .flex__cell.\-#{$index}of#{$grid-max},
+  .flex__cell--#{$index}of#{$grid-max} {
+    width: calc((100 * #{$index} / #{$grid-max}) * 1%);
+  }
+}

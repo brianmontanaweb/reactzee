@@ -1,0 +1,26 @@
+@keyframes headline-primary-ts {
+  25% {
+    text-shadow: -2px -2px 1px $light-red,
+    2px -2px 1px $light-orange,
+    -2px 2px 1px $light-yellow,
+    2px 2px 1px $light-green;
+  }
+  50% {
+    text-shadow: 2px -2px 1px $light-red,
+    -2px 2px 1px $light-orange,
+    2px 2px 1px $light-yellow,
+    -2px -2px 1px $light-green;
+  }
+  75% {
+    text-shadow: -2px 2px 1px $light-red,
+    2px 2px 1px $light-orange,
+    -2px -2px 1px $light-yellow,
+    2px -2px 1px $light-green;
+  }
+  100% {
+    text-shadow: 2px 2px 1px $light-red,
+    -2px -2px 1px $light-orange,
+    2px -2px 1px $light-yellow,
+    -2px 2px 1px $light-green;
+  }
+}

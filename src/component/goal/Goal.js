@@ -3,22 +3,20 @@ import PropTypes from 'prop-types';
 import { Dice } from '../dice/Dice';
 import { Label } from '../label/Label';
 import { Input } from '../input/Input';
-import { Hint } from '../hint/Hint';
 
 class Goal extends React.Component {
   render() {
     return (
-      <div>
+      <div className="flex__grid flex__grid--center flex__grid--row goal">
         <Label labelName="aces"
                labelValue={`How many ${this.props.goalName}?`}/>
+        <Dice diceValue={this.props.goalDice} goalHint={this.props.goalHint}/>
         <Input inputValue={this.props.goalValue}
                inputType="number"
                inputName={this.props.goalName}
                inputStep={this.props.goalStep}
                inputMax={this.props.goalMax}
                handleInputChange={this.props.handleInput}/>
-        <Hint hintContent={this.props.goalHint} />
-        <Dice diceValue={this.props.goalDice}/>
       </div>
     )
   }

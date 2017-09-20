@@ -1,9 +1,9 @@
-@import url('//fonts.googleapis.com/css?family=Alice');
+@import url('//fonts.googleapis.com/css?family=Noto+Sans');
 @import url('//fonts.googleapis.com/css?family=Gloria+Hallelujah');
 
 //Fontstacks
 $primary-fonts: 'Gloria Hallelujah', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
-$secondary-fonts: 'Alice', 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+$secondary-fonts: 'Noto Sans', 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
 
 //Dice dots
 $dice-size: 1vw;
@@ -28,3 +28,10 @@ $light-orange: #ffc252;
 $light-yellow: #ffea52;
 
 $light-green: #52ff5d;
+
+$grey: #9a9a9a;
+$light-grey: lighten($grey, 20%);
+
+
+//Grid / Layout
+$grid-max: 12;

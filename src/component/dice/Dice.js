@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Hint } from '../hint/Hint';
 
 export const Dice = (props) => {
   return (
@@ -9,10 +10,13 @@ export const Dice = (props) => {
         <span className="srt">{props.diceValue}</span>
       </div>
 
+      <Hint hintContent={props.goalHint} />
+
     </div>
   )
 };
 
 Dice.propTypes = {
   diceValue: PropTypes.string.isRequired,
+  goalHint: PropTypes.string,
 };

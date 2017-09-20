@@ -28,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1 className="headline-primary">Yahtzee!</h1>
+        <h1 className="headline-primary ta-center">Yahtzee!</h1>
         <Scoreboard handleInput={this.handleInput}
                     currentGoals={this.state.currentGoals} />
       </div>
