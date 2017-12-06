@@ -1,22 +1,128 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Hint } from '../hint/Hint';
 
-export const Dice = (props) => {
-  return (
-    <div className="dice__container">
+class Dice extends Component {
 
-      <div className={`dice__component dice-count dice-count--${props.diceValue}`}>
-        <span className="srt">{props.diceValue}</span>
+  render() {
+    //This seems bloated, wonder about updating it
+    let diceSvg = value => {
+      if (value === 1) {
+        return (
+          <g>
+            <circle r="2" cx="16" cy="16"></circle>
+          </g>
+        )
+      }
+      if (value === 2) {
+        return (
+          <g>
+            <circle r="2" cx="16" cy="16">
+
+            </circle>
+            <circle r="2" cx="24" cy="16">
+
+            </circle>
+          </g>
+        )
+      }
+      if (value === 3) {
+        return (
+          <g>
+            <circle r="2" cx="16" cy="16">
+
+            </circle>
+            <circle r="2" cx="16" cy="16">
+
+            </circle>
+            <circle r="2" cx="24" cy="24">
+
+            </circle>
+          </g>
+        )
+      }
+      if (value === 4) {
+        return (
+          <g>
+            <circle r="2" cx="16" cy="16">
+
+            </circle>
+            <circle r="2" cx="24" cy="24">
+
+            </circle>
+            <circle r="2" cx="24" cy="8">
+
+            </circle>
+            <circle r="2" cx="8" cy="24">
+
+            </circle>
+          </g>
+        )
+      }
+      if (value === 5) {
+        return (
+          <g>
+            <circle r="2" cx="16" cy="16">
+
+            </circle>
+            <circle r="2" cx="16" cy="16">
+
+            </circle>
+            <circle r="2" cx="24" cy="24">
+
+            </circle>
+            <circle r="2" cx="24" cy="8">
+
+            </circle>
+            <circle r="2" cx="8" cy="24">
+
+            </circle>
+          </g>
+        )
+      }
+      if (value === 6) {
+        return (
+          <g>
+            <circle r="2" cx="16" cy="16">
+
+            </circle>
+            <circle r="2" cx="16" cy="16">
+
+            </circle>
+            <circle r="2" cx="24" cy="24">
+
+            </circle>
+            <circle r="2" cx="24" cy="8">
+
+            </circle>
+            <circle r="2" cx="8" cy="24">
+
+            </circle>
+            <circle r="2" cx="8" cy="16">
+
+            </circle>
+            <circle r="2" cx="24" cy="16">
+
+            </circle>
+          </g>
+        )
+      }
+    };
+    return (
+      <div className="dice__container">
+
+        <div className={`dice__component dice-count dice-count--${this.props.diceValue}`}>
+          <span className="srt">{this.props.diceValue}</span>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        {diceSvg(this.props.diceValue)}
+        </svg>
+
+        <Hint hintContent={this.props.goalHint} />
+
       </div>
-
-      <Hint hintContent={props.goalHint} />
-
-    </div>
-  )
+    )
+  }
 };
 
-Dice.propTypes = {
-  diceValue: PropTypes.string.isRequired,
-  goalHint: PropTypes.string,
-};
+export default Dice;

@@ -5,25 +5,34 @@ import PropTypes from 'prop-types';
 
 class UpperSection extends React.Component {
   render() {
-    let total = Object.values(this.props.currentGoals).reduce((a,b) => Number.parseInt(a, 10) + (Number.parseInt(b, 10) || 0), 0);
-    let bonusTotal = total > 63 ? total + 35 : total;
+    const diceCount = 6;
+    let upperMax = value => {
+      return value * diceCount;
+    };
+    let total = () => {
+      return Object.values(this.props.currentGoals).reduce((a,b) => Number.parseInt(a, 10) + (Number.parseInt(b, 10) || 0), 0);
+    };
+    let bonusTotal = total => {
+      total += total > 63 ? 35 : total;
+      return total;
+    };
 
     return (
       <div className="flex__grid flex__grid--center flex__grid--row">
         <Goal handleInput={this.props.handleInput}
               goalValue={this.props.currentGoals.ones}
-              goalDice="1"
-              goalMax={5}
+              goalDice="2"
+              goalMax={10}
               goalName="ones"
-              goalStep={1}
+              goalStep={2}
               goalHint="Count and add only ones"
         />
         <Goal handleInput={this.props.handleInput}
               goalValue={this.props.currentGoals.twos}
-              goalDice="2"
+              goalDice="1"
               goalMax={10}
               goalName="twos"
-              goalStep={2}
+              goalStep={1}
               goalHint="Count and add only twos"
         />
         <Goal handleInput={this.props.handleInput}

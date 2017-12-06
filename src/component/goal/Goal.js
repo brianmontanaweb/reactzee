@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Dice } from '../dice/Dice';
+import Dice from '../dice/Dice';
 import { Label } from '../label/Label';
 import { Input } from '../input/Input';
 
