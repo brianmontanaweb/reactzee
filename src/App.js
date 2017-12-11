@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import Scoreboard from './component/scoreboard/Scoreboard';
+import {randomDiceArray} from "./helpers";
 
 class App extends Component {
 
   state = {
     yahtzeeHistory: [],
-    currentGoals: {
-      ones: 0,
-      twos: 0,
-      threes: 0,
-      fours: 0,
-      fives: 0,
-      sixes: 0,
-    },
+    currentGoals: randomDiceArray({amount: 10, max: 6}),
   };
 
   handleInput = (event) => {

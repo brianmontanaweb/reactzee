@@ -12,7 +12,7 @@ class Total extends React.Component {
 }
 
 Total.propTypes = {
-  totalValue: PropTypes.number,
+  totalValue: PropTypes.func.isRequired,
 };
 
 export default Total;

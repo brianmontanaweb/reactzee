@@ -28,7 +28,6 @@ class Goal extends React.Component {
   static propTypes = {
     handleInput: PropTypes.func.isRequired,
     goalDice: PropTypes.number.isRequired,
-    goalName: PropTypes.string.isRequired,
     goalHint: PropTypes.string,
   };
 }

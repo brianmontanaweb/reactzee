@@ -15,7 +15,7 @@ class Scoreboard extends Component {
 
   static propTypes = {
     handleInput: PropTypes.func.isRequired,
-    currentGoals: PropTypes.object.isRequired,
+    currentGoals: PropTypes.array.isRequired,
   };
 }
 

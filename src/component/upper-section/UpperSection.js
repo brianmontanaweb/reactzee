@@ -12,40 +12,17 @@ class UpperSection extends React.Component {
       total += total > 63 ? 35 : total;
       return total;
     };
-    // TODO: setup array to map out the dice components dynamically
+    // TODO: setup array to map out the dice components dynamically, when user starts game
 
     return (
       <div className="flex__grid flex__grid--center flex__grid--row">
-        <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.currentGoals.ones}
-              goalDice={1}
-              goalHint="Count and add only ones"
-        />
-        <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.currentGoals.twos}
-              goalDice={2}
-              goalHint="Count and add only twos"
-        />
-        <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.currentGoals.threes}
-              goalDice={3}
-              goalHint="Count and add only threes"
-        />
-        <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.currentGoals.fours}
-              goalDice={4}
-              goalHint="Count and add only fours"
-        />
-        <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.currentGoals.fives}
-              goalDice={5}
-              goalHint="Count and add only fives"
-        />
-        <Goal handleInput={this.props.handleInput}
-              goalValue={this.props.currentGoals.sixes}
-              goalDice={6}
-              goalHint="Count and add only sixes"
-        />
+        {this.props.currentGoals.map((element, index) =>
+          <Goal key={index}
+                handleInput={this.props.handleInput}
+                goalHint={`Count and add only ${element}`}
+                goalDice={element}
+          />
+        )}
         {/*Top total + bonus if score > 63*/}
         <Total totalValue={total} />
         <Total totalValue={bonusTotal} />
@@ -55,7 +32,7 @@ class UpperSection extends React.Component {
 
   static propTypes = {
     handleInput: PropTypes.func.isRequired,
-    currentGoals: PropTypes.object.isRequired,
+    currentGoals: PropTypes.array.isRequired,
   };
 }
 
